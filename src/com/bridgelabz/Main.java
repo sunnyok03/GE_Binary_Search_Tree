@@ -26,7 +26,6 @@ public class Main {
         UC2.insert(67);
         UC2.inorderTraversal();
         System.out.println("size is: " + UC2.size());
-
-
+        System.out.println("Search for 63: " + UC2.search(63));
     }
 }

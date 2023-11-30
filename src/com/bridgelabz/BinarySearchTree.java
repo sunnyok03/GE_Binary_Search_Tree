@@ -87,5 +87,26 @@ public class BinarySearchTree<T extends Comparable<T>> {
         return 1 + leftSize + rightSize;
     }
 
+    /*
+    @desc: check if data is available in current object
+    @params:data
+    @return: true if available else false
+     */
+    public boolean search(T data){
+        return search(data,root);
+    }
+
+    /*
+    @desc: check if data is available in current object
+    @params:data and root of current object
+    @return: true if available else false
+     */
+    private boolean search(T data,Node<T> root){
+        if(root == null){
+            return false;
+        }
+        return root.data == data || search(data,root.left) || search(data,root.right);
+    }
+
 
 }
