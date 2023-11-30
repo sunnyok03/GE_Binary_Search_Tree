@@ -64,4 +64,28 @@ public class BinarySearchTree<T extends Comparable<T>> {
         inorderTraversal(root.right);
     }
 
+    /*
+    @desc: to find number of nodes in current object
+    @params:
+    @return: integer value as number of nodes
+     */
+    public int size(){
+        return size(root);
+    }
+
+    /*
+     @desc: to find number of nodes in current object
+     @params: root
+     @return: integer value as number of nodes
+      */
+    private int size(Node<T> root){
+        if(root == null){
+            return 0;
+        }
+        int leftSize = size(root.left);
+        int rightSize = size(root.right);
+        return 1 + leftSize + rightSize;
+    }
+
+
 }
